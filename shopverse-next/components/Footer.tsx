@@ -29,23 +29,23 @@ const Footer: React.FC = () => {
         {/* Contact Information */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <p>Email: support@shopverse.com</p>
+          <p>Email: support@TrendyKart.com</p>
           <p>Phone: +1 (123) 456-7890</p>
           <p>Address: 123 E-Commerce St, Shop City, SC 12345</p>
         </div>
 
-        {/* About Shopverse */}
+        {/* About TrendyKart */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">About Shopverse</h3>
+          <h3 className="text-lg font-semibold mb-4">About TrendyKart</h3>
           <p>
-            Shopverse is your one-stop e-commerce platform, offering a wide range of products with seamless shopping and delivery experiences.
+            TrendyKart is your one-stop e-commerce platform, offering a wide range of products with seamless shopping and delivery experiences.
           </p>
         </div>
       </div>
 
       {/* Copyright Notice */}
       <div className="mt-6 text-center border-t border-gray-600 pt-4">
-        <p>&copy; {new Date().getFullYear()} Shopverse. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} TrendyKart. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -23,42 +23,35 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white p-4">
+    <header className="bg-white text-black p-6">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold">
-          Shopverse
-        </Link>
+          <Link href="/" className="text-2xl font-bold">
+            TrendyKart
+          </Link>
 
         {/* Navigation Links */}
         <nav className="space-x-4">
-          <Link href="/" className="hover:text-gray-300">
+          <div className='flex items-center space-x-4'>
+          <Link href="/" className="hover:text-gray-300 text-3xl font-serif">
             Home
           </Link>
-          <Link href="/products" className="hover:text-gray-300">
-            Products
+          <Link href="/products" className="hover:text-gray-300 text-3xl font-serif">
+            Collections
           </Link>
+          <Link href="/products" className="hover:text-gray-300 text-3xl font-serif">
+            About
+          </Link>
+          </div>
+          
+          </nav>
 
-          {/* Role-based Links */}
-          {user && user.role === UserRole.SuperAdmin && (
-            <Link href="/superadmin" className="hover:text-gray-300">
-              SuperAdmin
-            </Link>
-          )}
-          {(user && user.role === UserRole.Admin) || (user && user.role === UserRole.SuperAdmin) ? (
-            <Link href="/admin" className="hover:text-gray-300">
-              Admin
-            </Link>
-          ) : null}
-          {user && user.role === UserRole.DeliveryBoy && (
-            <Link href="/delivery" className="hover:text-gray-300">
-              Delivery
-            </Link>
-          )}
+        
 
+          <div className="flex items-center space-x-4">
           {/* Cart Link (Visible to Users) */}
           {(user && user.role === UserRole.User) || !user ? (
-            <Link href="/cart" className="relative hover:text-gray-300">
+            <Link href="/cart" className="relative hover:text-gray-300 text-3xl font-serif">
               Cart
               {cart.length > 0 && (
                 <span className="absolute -top-1 -right-3 bg-red-500 text-white text-xs rounded-full px-2">
@@ -72,16 +65,16 @@ const Header: React.FC = () => {
           {user ? (
             <button
               onClick={handleLogout}
-              className="hover:text-gray-300"
+              className="hover:text-gray-300 text-3xl font-serif"
             >
               Logout
             </button>
           ) : (
-            <Link href="/login" className="hover:text-gray-300">
+            <Link href="/login" className="hover:text-gray-300 text-3xl font-serif">
               Login
             </Link>
           )}
-        </nav>
+        </div>
       </div>
     </header>
   );

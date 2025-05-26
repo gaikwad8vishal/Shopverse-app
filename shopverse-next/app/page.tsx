@@ -12,7 +12,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Welcome to Shopverse
+        Welcome to TrendyKart
       </motion.h1>
       <motion.p
         className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl"
